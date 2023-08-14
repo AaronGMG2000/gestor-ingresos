@@ -1,0 +1,31 @@
+{
+    "@@locale": "es",
+    "loginTitle": "¡Bienvenido de nuevo!",
+    "loginButton": "Iniciar sesión",
+    "loginEmail": "Correo electrónico",
+    "loginPassword": "Contraseña",
+    "repeatPassword": "Repetir contraseña",
+    "loginError": "Error al iniciar sesión, intente nuevamente más tarde",
+    "loginErrorEmail": "El correo electrónico no es válido",
+    "loginErrorPassword": "La contraseña no es válida",
+    "loginErrorCredentials": "Las credenciales no son válidas",
+    "ErrorServer": "Error del servidor",
+    "signupText": "¿No tienes una cuenta?",
+    "signupButton": "Regístrate",
+    "orText": "O",
+
+
+    "signupTitle": "Crea una cuenta",
+    "signupAction": "Crear cuenta",
+    "signupError": "Error al crear la cuenta, intente nuevamente más tarde",
+    "signupErrorEmail": "El correo electrónico ya está en uso",
+    "loginText": "¿Ya tienes una cuenta?",
+    "loginTextButton": "Inicia sesión",
+    "inputName": "Nombre",
+    "inputPhoto": "Foto",
+    
+
+    "load_text": "Cargando...",
+    "requiredForm": "Este campo es obligatorio"
+
+}

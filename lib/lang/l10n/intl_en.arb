@@ -1,0 +1,28 @@
+{
+    "@@locale": "en",
+    "loginTitle": "Welcome back!",
+    "loginButton": "Log in",
+    "loginEmail": "Email",
+    "loginPassword": "Password",
+    "repeatPassword": "Repeat password",
+    "loginError": "Login error, try again later",
+    "loginErrorEmail": "Email is not valid",
+    "loginErrorPassword": "Password is not valid",
+    "loginErrorCredentials": "Credentials are not valid",
+    "ErrorServer": "Server error",
+    "signupText": "Don't have an account?",
+    "signupTitle": "Create an account",
+    "orText": "Or",
+
+    "signupButton": "Sign up",
+    "signupAction": "Sign up",
+    "signupError": "Error creating account, try again later",
+    "signupErrorEmail": "Email is already in use",
+    "loginText": "Already have an account?",
+    "loginTextButton": "Log in",
+    "inputName": "Name",
+    "inputPhoto": "Photo",
+
+    "load_text": "Loading...",
+    "requiredForm": "This field is required"
+}

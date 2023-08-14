@@ -1,0 +1,69 @@
+name: gestor_ingresos
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+    sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+    flutter_localizations:
+        sdk: flutter
+    flutter:
+        sdk: flutter
+    cupertino_icons: ^1.0.5
+    get: ^4.6.5
+    http: ^1.1.0
+    firebase_core: ^2.15.0
+    firebase_crashlytics: ^3.3.4
+    firebase_auth: ^4.7.2
+    firebase_messaging: ^14.6.5
+    json_annotation: ^4.8.1
+    google_sign_in: ^6.1.4
+    intl_utils: ^2.8.4
+    intl: ^0.18.0
+    flutter_local_notifications: ^15.1.0+1
+    firebase_analytics: ^10.4.4
+    flutter_localization: ^0.1.13
+    firebase_storage: ^11.2.5
+    get_storage: ^2.1.1
+    auto_size_text: ^3.0.0
+    flutter_gutter: ^0.1.2
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^2.0.2
+    json_serializable: ^6.7.1
+    flutter_launcher_icons: ^0.13.1
+    build_runner: ^2.4.6
+
+flutter_launcher_icons:
+    android: 'launcher_icon'
+    remove_alpha_ios: true
+    ios: true
+    image_path: 'assets/icon/ic_launcher.png'
+    adaptive_icon_background: #162B53
+    min_sdk_android: 19
+
+flutter_intl:
+    enabled: true
+    class_name: AppLang
+    arb_dir: lib/lang/l10n
+    output_dir: lib/lang/generated
+
+flutter:
+    uses-material-design: true
+
+    assets:
+        - assets/img/
+        - assets/icon/
+
+    fonts:
+        - family: Century
+          fonts:
+              - asset: assets/fonts/century_gothic.ttf
+              - asset: assets/fonts/berthold_akzidenz_grotesk.ttf
+        - family: Berthold
+          fonts:
+              - asset: assets/fonts/berthold_akzidenz_grotesk.ttf

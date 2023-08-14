@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "869717419948",
+    "project_id": "gestor-gastos-21208",
+    "storage_bucket": "gestor-gastos-21208.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869717419948:android:8fa4a1e630c511212c3c09",
+        "android_client_info": {
+          "package_name": "com.mg.gestor_ingresos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869717419948-qm3fa755h27b3mkaaan3amm23ohm16kb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mg.gestor_ingresos",
+            "certificate_hash": "87d08c3b66e9a9da9d30d4ba5f522090f371d86a"
+          }
+        },
+        {
+          "client_id": "869717419948-81dqfmlupj3fm7jmb4854uuce89c5c94.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA65Bq_-E5jdimUuZ94pG71d2mO67jCUHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869717419948-81dqfmlupj3fm7jmb4854uuce89c5c94.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
