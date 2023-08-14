@@ -8,20 +8,31 @@ class CustomInput extends StatelessWidget {
   final bool isRequired;
   final Iterable<String>? autofillHints;
   final TextInputType? keyboardType;
+  final TextEditingController? controller;
+  final IconData? suffixIcon;
+  final void Function()? onPressed;
+
   const CustomInput(
     this.label, {
     Key? key,
     this.onChange,
     this.isRequired = true,
     this.keyboardType,
+    this.controller,
     this.autofillHints,
+    this.suffixIcon,
+    this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      decoration: InputDecoration(label: Text(label)),
+      decoration: InputDecoration(
+        label: Text(label),
+        suffix: suffixIcon != null ? IconButton(icon: Icon(suffixIcon), onPressed: onPressed) : null,
+      ),
       keyboardType: keyboardType,
+      controller: controller,
       autofillHints: autofillHints,
       validator: isRequired
           ? (value) {

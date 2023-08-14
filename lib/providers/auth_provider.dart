@@ -86,6 +86,23 @@ class AuthProvider {
     }
   }
 
+  Future<UserModel?> updateProfile(UserModel user) async {
+    NotificationService.loading();
+    try {
+      await _firebaseAuth.currentUser!.updateDisplayName(user.name);
+      await _firebaseAuth.currentUser!.updatePhotoURL(user.photoUrl);
+      Get.back();
+      await NotificationService.showSnackbar('Profile updated successfully');
+      return currentUser;
+    } catch (e) {
+      Get.back();
+      debugPrint(e.toString());
+      await logout();
+      await NotificationService.errorDialog('Update Profile', 'Error updating profile');
+      return null;
+    }
+  }
+
   UserModel? get currentUser {
     final user = _firebaseAuth.currentUser;
     if (user == null) return null;

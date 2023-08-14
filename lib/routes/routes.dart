@@ -1,5 +1,4 @@
 import 'package:gestor_ingresos/pages/index.dart';
-import 'package:gestor_ingresos/pages/navigation_page/navigation_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +17,8 @@ class AppRouter {
         return getRoute(settings, const NavigationPage());
       case SplashPage.routeName:
         return getRoute(settings, const SplashPage());
+      case ConfigurationPage.routeName:
+        return getRoute(settings, const ConfigurationPage());
       default:
         return getRoute(settings, const SplashPage());
     }

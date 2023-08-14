@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gestor_ingresos/utils/index.dart';
 
 class AppFonts {
   AppFonts._();
@@ -27,18 +26,15 @@ class AppFonts {
     return TextStyle(
       fontFamily: FontFamily.century.name,
       fontSize: size,
-      color: color,
     );
   }
 
   TextStyle get errorDialogButton => TextStyle(
         fontFamily: FontFamily.berthold.name,
-        color: AppColor.shared.primaryColor,
       );
 
   TextStyle get errorDialogMessage => TextStyle(
         fontFamily: FontFamily.century.name,
-        color: Colors.black54,
         fontSize: 14,
       );
 

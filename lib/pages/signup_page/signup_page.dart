@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gutter/flutter_gutter.dart';
 import 'package:gestor_ingresos/controllers/index.dart';
 import 'package:gestor_ingresos/lang/generated/l10n.dart';
+import 'package:gestor_ingresos/pages/configuration_page/configuration_page.dart';
 import 'package:gestor_ingresos/pages/login_page/login_page.dart';
 import 'package:gestor_ingresos/services/index.dart';
 import 'package:gestor_ingresos/utils/index.dart';
@@ -24,9 +25,9 @@ class SignupPage extends StatelessWidget {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(shape: const CircleBorder()),
-              onPressed: () {},
+              onPressed: () => Get.toNamed(ConfigurationPage.routeName),
               child: const Icon(Icons.settings),
-            ),
+            ).onHero('settings'),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),

@@ -24,5 +24,11 @@
     "inputPhoto": "Photo",
 
     "load_text": "Loading...",
-    "requiredForm": "This field is required"
+    "requiredForm": "This field is required",
+
+    "languageEs": "Spanish",
+    "languageEn": "English",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "themeSystem": "System"
 }

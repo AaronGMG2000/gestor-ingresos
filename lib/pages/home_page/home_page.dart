@@ -69,36 +69,38 @@ class _Header extends StatelessWidget {
     final AuthController controller = Get.find<AuthController>();
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 25,
-            backgroundColor: Colors.white,
-            backgroundImage: AssetImage(controller.user.value?.photoUrl ?? 'assets/img/profile.png'),
-          ),
-          const Gutter(),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AutoSizeText(
-                  controller.user.value?.name ?? '',
-                  maxLines: 1,
-                  style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
-                ),
-                AutoSizeText(
-                  controller.user.value?.email ?? '',
-                  style: const TextStyle(fontSize: 10, color: Colors.white),
-                ),
-              ],
+      child: Obx(
+        () => Row(
+          children: [
+            CircleAvatar(
+              radius: 25,
+              backgroundColor: Colors.white,
+              backgroundImage: AssetImage(controller.user.value?.photoUrl ?? 'assets/img/profile.png'),
+            ).onHero('profile'),
+            const Gutter(),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AutoSizeText(
+                    controller.user.value?.name ?? '',
+                    maxLines: 1,
+                    style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
+                  ),
+                  AutoSizeText(
+                    controller.user.value?.email ?? '',
+                    style: const TextStyle(fontSize: 10, color: Colors.white),
+                  ),
+                ],
+              ),
             ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.settings),
-            color: Colors.white,
-          ).onHero('settings'),
-        ],
+            IconButton(
+              onPressed: () => Get.toNamed('ConfigurationPage'),
+              icon: const Icon(Icons.settings),
+              color: Colors.white,
+            ).onHero('settings'),
+          ],
+        ),
       ),
     );
   }

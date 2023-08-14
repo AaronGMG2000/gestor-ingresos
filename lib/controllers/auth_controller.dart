@@ -1,5 +1,6 @@
 import 'package:gestor_ingresos/models/index.dart';
 import 'package:gestor_ingresos/pages/index.dart';
+import 'package:gestor_ingresos/providers/configuration_provider.dart';
 import 'package:gestor_ingresos/providers/index.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +14,7 @@ class AuthController extends GetxController {
   }
 
   Future<void> _init() async {
+    await ConfigurationProvider.shared.init();
     await NotificationProvider.shared.init();
     await FirebaseProvider.shared.init();
     await Future.delayed(const Duration(seconds: 1));
@@ -43,6 +45,14 @@ class AuthController extends GetxController {
     if (user != null) {
       this.user.value = user;
       await Get.offAllNamed(NavigationPage.routeName);
+    }
+  }
+
+  Future<void> updateProfile() async {
+    if (user.value == null) return;
+    final UserModel? userUpdated = await AuthProvider.shared.updateProfile(user.value!);
+    if (userUpdated != null) {
+      user.value = userUpdated;
     }
   }
 

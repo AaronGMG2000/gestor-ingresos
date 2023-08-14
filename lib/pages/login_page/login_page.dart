@@ -24,9 +24,9 @@ class LoginPage extends StatelessWidget {
           children: [
             ElevatedButton(
               style: ElevatedButton.styleFrom(shape: const CircleBorder()),
-              onPressed: () {},
+              onPressed: () => Get.toNamed(ConfigurationPage.routeName),
               child: const Icon(Icons.settings),
-            ),
+            ).onHero('settings'),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -67,7 +67,7 @@ class _Footer extends StatelessWidget {
           ],
         ),
         const Gutter(),
-        ImageButton(url: 'assets/icon/google_icon.png', onTap: () {}),
+        ImageButton(url: 'assets/icon/google_icon.png', onTap: () => Get.find<AuthController>().googleLogin()),
         const Gutter(),
         const Divider(),
         Row(

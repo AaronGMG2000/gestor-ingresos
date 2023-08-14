@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Error del servidor"),
         "inputName": MessageLookupByLibrary.simpleMessage("Nombre"),
         "inputPhoto": MessageLookupByLibrary.simpleMessage("Foto"),
+        "languageEn": MessageLookupByLibrary.simpleMessage("Inglés"),
+        "languageEs": MessageLookupByLibrary.simpleMessage("Español"),
         "load_text": MessageLookupByLibrary.simpleMessage("Cargando..."),
         "loginButton": MessageLookupByLibrary.simpleMessage("Iniciar sesión"),
         "loginEmail":
@@ -58,6 +60,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "El correo electrónico ya está en uso"),
         "signupText":
             MessageLookupByLibrary.simpleMessage("¿No tienes una cuenta?"),
-        "signupTitle": MessageLookupByLibrary.simpleMessage("Crea una cuenta")
+        "signupTitle": MessageLookupByLibrary.simpleMessage("Crea una cuenta"),
+        "themeDark": MessageLookupByLibrary.simpleMessage("Oscuro"),
+        "themeLight": MessageLookupByLibrary.simpleMessage("Claro"),
+        "themeSystem": MessageLookupByLibrary.simpleMessage("Sistema")
       };
 }

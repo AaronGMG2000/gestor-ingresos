@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "ErrorServer": MessageLookupByLibrary.simpleMessage("Server error"),
         "inputName": MessageLookupByLibrary.simpleMessage("Name"),
         "inputPhoto": MessageLookupByLibrary.simpleMessage("Photo"),
+        "languageEn": MessageLookupByLibrary.simpleMessage("English"),
+        "languageEs": MessageLookupByLibrary.simpleMessage("Spanish"),
         "load_text": MessageLookupByLibrary.simpleMessage("Loading..."),
         "loginButton": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginEmail": MessageLookupByLibrary.simpleMessage("Email"),
@@ -54,6 +56,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is already in use"),
         "signupText":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "signupTitle": MessageLookupByLibrary.simpleMessage("Create an account")
+        "signupTitle":
+            MessageLookupByLibrary.simpleMessage("Create an account"),
+        "themeDark": MessageLookupByLibrary.simpleMessage("Dark"),
+        "themeLight": MessageLookupByLibrary.simpleMessage("Light"),
+        "themeSystem": MessageLookupByLibrary.simpleMessage("System")
       };
 }

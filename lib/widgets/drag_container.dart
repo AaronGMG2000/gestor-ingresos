@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gutter/flutter_gutter.dart';
 import 'package:gestor_ingresos/services/extensions.dart';
 import 'package:gestor_ingresos/utils/app_color.dart';
-import 'package:get/get.dart';
 
 class DragContainer extends StatefulWidget {
   final double minHeigth;
@@ -12,7 +11,7 @@ class DragContainer extends StatefulWidget {
   final Color? backgroundColor;
   const DragContainer({
     Key? key,
-    this.initialHeight = 0.45,
+    this.initialHeight = 0.35,
     this.maxHeigth = 0.55,
     this.minHeigth = 0.3,
     this.children = const [],
@@ -27,6 +26,7 @@ class _DragContainerState extends State<DragContainer> {
   late double _x = widget.initialHeight;
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return GestureDetector(
       onVerticalDragUpdate: (details) {
         _x += -details.delta.dy / MediaQuery.of(context).size.height;
@@ -41,8 +41,8 @@ class _DragContainerState extends State<DragContainer> {
         width: double.infinity,
         height: MediaQuery.of(context).size.height * _x,
         decoration: BoxDecoration(
-          color:
-              widget.backgroundColor ?? (Get.isDarkMode ? AppColor.shared.backgroundDark : AppColor.shared.background),
+          color: widget.backgroundColor ??
+              (theme.brightness == Brightness.dark ? AppColor.shared.backgroundDark : AppColor.shared.background),
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -52,7 +52,12 @@ class _DragContainerState extends State<DragContainer> {
           children: [
             const Icon(Icons.drag_handle),
             const Gutter(),
-            Expanded(child: Column(children: widget.children).inScroll),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(children: widget.children).inScroll,
+              ),
+            ),
           ],
         ),
       ),

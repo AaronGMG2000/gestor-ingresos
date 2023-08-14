@@ -26,6 +26,12 @@
     
 
     "load_text": "Cargando...",
-    "requiredForm": "Este campo es obligatorio"
+    "requiredForm": "Este campo es obligatorio",
+
+    "languageEs": "Español",
+    "languageEn": "Inglés",
+    "themeDark": "Oscuro",
+    "themeLight": "Claro",
+    "themeSystem": "Sistema"
 
 }

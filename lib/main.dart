@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: Get.deviceLocale,
+      locale: Get.locale,
       fallbackLocale: const Locale('es'),
       supportedLocales: AppLang.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
