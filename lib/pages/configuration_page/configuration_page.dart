@@ -19,7 +19,9 @@ class ConfigurationPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(controller.user.value != null ? 'Perfil' : 'Configuración'),
-        actions: [IconButton(onPressed: () async => await controller.logout(), icon: const Icon(Icons.logout))],
+        actions: controller.user.value != null
+            ? [IconButton(onPressed: () async => await controller.logout(), icon: const Icon(Icons.logout))]
+            : null,
       ),
       body: SafeArea(
         child: Padding(
@@ -35,7 +37,10 @@ class ConfigurationPage extends StatelessWidget {
                   child: CircleAvatar(
                     radius: 80,
                     backgroundColor: Colors.white,
-                    backgroundImage: AssetImage(controller.user.value?.photoUrl ?? 'assets/img/profile.png'),
+                    backgroundImage:
+                        controller.user.value?.photoUrl != null && controller.user.value!.photoUrl!.contains('http')
+                            ? NetworkImage(controller.user.value!.photoUrl!) as ImageProvider
+                            : AssetImage(controller.user.value?.photoUrl ?? 'assets/img/profile.png'),
                   ).onHero('profile'),
                 ),
               const SizedBox(height: 25),

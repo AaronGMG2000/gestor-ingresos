@@ -58,6 +58,7 @@ class AuthController extends GetxController {
 
   Future<void> logout() async {
     await AuthProvider.shared.logout();
+    user.value = null;
     await Get.offAllNamed(LoginPage.routeName);
   }
 

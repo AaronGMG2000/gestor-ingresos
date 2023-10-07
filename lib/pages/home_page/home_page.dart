@@ -75,7 +75,10 @@ class _Header extends StatelessWidget {
             CircleAvatar(
               radius: 25,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage(controller.user.value?.photoUrl ?? 'assets/img/profile.png'),
+              backgroundImage:
+                  controller.user.value?.photoUrl != null && controller.user.value!.photoUrl!.contains('http')
+                      ? NetworkImage(controller.user.value!.photoUrl!) as ImageProvider
+                      : AssetImage(controller.user.value?.photoUrl ?? 'assets/img/profile.png'),
             ).onHero('profile'),
             const Gutter(),
             Expanded(
